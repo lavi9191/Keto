@@ -1,0 +1,4 @@
+D:\ProjektyVS2022\Keto\Keto\bin\Release\net8.0-windows\win-x86\app.publish\Keto.pdb
+D:\ProjektyVS2022\Keto\Keto\bin\Release\net8.0-windows\win-x86\app.publish\sni.dll
+D:\ProjektyVS2022\Keto\Keto\bin\Release\net8.0-windows\win-x86\app.publish\SQLite.Interop.dll
+D:\ProjektyVS2022\Keto\Keto\bin\Release\net8.0-windows\win-x86\app.publish\Keto.exe

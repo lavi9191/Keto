@@ -1,0 +1,75 @@
+﻿<Window x:Class="Keto.Views.Recipes.EditRecipeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Edytuj Przepis" Height="720" Width="500">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Nazwa przepisu -->
+        <Label Content="Nazwa przepisu:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="10"/>
+        <TextBox x:Name="RecipeNameTextBox" Grid.Row="0" Grid.Column="1" Margin="10" Width="250"/>
+
+        <!-- Białko -->
+        <Label Content="Białko (g):" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="10"/>
+        <TextBox x:Name="ProteinTextBox" Grid.Row="1" Grid.Column="1" Margin="10" Width="250"/>
+
+        <!-- Tłuszcz -->
+        <Label Content="Tłuszcz (g):" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="10"/>
+        <TextBox x:Name="FatTextBox" Grid.Row="2" Grid.Column="1" Margin="10" Width="250"/>
+
+        <!-- Węglowodany -->
+        <Label Content="Węglowodany (g):" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Margin="10"/>
+        <TextBox x:Name="CarbsTextBox" Grid.Row="3" Grid.Column="1" Margin="10" Width="250"/>
+
+        <!-- Węglowodany netto -->
+        <Label Content="Węglowodany netto (g):" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" Margin="10"/>
+        <TextBox x:Name="NetCarbsTextBox" Grid.Row="4" Grid.Column="1" Margin="10" Width="250"/>
+
+        <!-- Kalorie -->
+        <Label Content="Kalorie (kcal):" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" Margin="10"/>
+        <TextBox x:Name="CaloriesTextBox" Grid.Row="5" Grid.Column="1" Margin="10" Width="250"/>
+
+        <!-- Składniki -->
+        <Label Content="Składniki:" Grid.Row="6" Grid.Column="0" VerticalAlignment="Center" Margin="10"/>
+        <TextBox x:Name="IngredientsTextBox" Grid.Row="6" Grid.Column="1" Margin="10" Height="60" Width="250" TextWrapping="Wrap" AcceptsReturn="True"/>
+
+        <!-- Ilość porcji -->
+        <Label Content="Ilość porcji:" Grid.Row="7" Grid.Column="0" VerticalAlignment="Center" Margin="10"/>
+        <TextBox x:Name="ServingsTextBox" Grid.Row="7" Grid.Column="1" Margin="10" Width="250"/>
+
+        <!-- Instrukcja przygotowania -->
+        <Label Content="Instrukcja przygotowania:" Grid.Row="8" Grid.Column="0" VerticalAlignment="Center" Margin="10"/>
+        <TextBox x:Name="InstructionsTextBox" Grid.Row="8" Grid.Column="1" Margin="10" Height="100" Width="250" TextWrapping="Wrap" AcceptsReturn="True"/>
+
+        <!-- Kategoria przepisu -->
+        <Label Content="Kategoria przepisu:" Grid.Row="9" Grid.Column="0" VerticalAlignment="Center" Margin="10"/>
+        <ComboBox x:Name="CategoryComboBox" Grid.Row="9" Grid.Column="1" Margin="10" Width="250">
+            <ComboBoxItem Content="Śniadanie i Kolacja"/>
+            <ComboBoxItem Content="Obiad"/>
+            <ComboBoxItem Content="Desery"/>
+        </ComboBox>
+
+        <!-- Przyciski -->
+        <StackPanel Orientation="Horizontal" Grid.Row="10" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="20">
+            <Button Content="Zapisz" Width="100" Height="30" Click="Save_Click" Margin="10"/>
+            <Button Content="Anuluj" Width="100" Height="30" Click="Cancel_Click" Margin="10"/>
+        </StackPanel>
+    </Grid>
+</Window>

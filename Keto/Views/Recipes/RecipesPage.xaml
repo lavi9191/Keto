@@ -1,0 +1,62 @@
+﻿<Window x:Class="Keto.Views.Recipes.RecipesPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Przepisy" Height="720" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Przyciski "Powrót" w lewym górnym rogu -->
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
+            <Button Width="40" Height="40" Click="GoToMainPage_Click">
+                <Image Source="/images/home.png" Stretch="Uniform"/>
+            </Button>
+        </StackPanel>
+
+        <TextBlock Text="Strona z przepisami" FontSize="20" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10"/>
+
+        <!-- Zakładki kategorii -->
+        <TabControl Grid.Row="1" Grid.Column="1" SelectionChanged="TabControl_SelectionChanged">
+            <TabItem Header="Śniadanie i Kolacja" x:Name="SniadanieKolacjaTab">
+                <ListBox x:Name="SniadanieKolacjaList"
+                         ItemsSource="{Binding}"
+                         DisplayMemberPath="Name"
+                         SelectionMode="Single"
+                         MouseDoubleClick="RecipesList_MouseDoubleClick"
+                         SelectionChanged="RecipesList_SelectionChanged"/>
+            </TabItem>
+            <TabItem Header="Obiad" x:Name="ObiadTab">
+                <ListBox x:Name="ObiadList"
+                         ItemsSource="{Binding}"
+                         DisplayMemberPath="Name"
+                         SelectionMode="Single"
+                         MouseDoubleClick="RecipesList_MouseDoubleClick"
+                         SelectionChanged="RecipesList_SelectionChanged"/>
+            </TabItem>
+            <TabItem Header="Desery" x:Name="DeseryTab">
+                <ListBox x:Name="DeseryList"
+                         ItemsSource="{Binding}"
+                         DisplayMemberPath="Name"
+                         SelectionMode="Single"
+                         MouseDoubleClick="RecipesList_MouseDoubleClick"
+                         SelectionChanged="RecipesList_SelectionChanged"/>
+            </TabItem>
+        </TabControl>
+
+        <StackPanel Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" Margin="10">
+            <Button Content="Dodaj przepis" Width="110" Height="30" Click="AddRecipe_Click" Margin="5"/>
+            <Button x:Name="DeleteButton" Content="Usuń przepis" Width="110" Height="30" Click="DeleteRecipe_Click" Margin="5" IsEnabled="False"/>
+            <Button x:Name="EditButton" Content="Edytuj przepis" Width="110" Height="30" Click="EditRecipe_Click" Margin="5" IsEnabled="False"/>
+            <Button x:Name="DetailsButton" Content="Szczegóły przepisu" Width="110" Height="30" Click="ShowRecipeDetails_Click" Margin="5" IsEnabled="False"/>
+            <Button Content="Drukuj do Word" Width="110" Height="30" Click="PrintRecipeToWord_Click" Margin="5"/>
+            <Button Content="Drukuj do PDF" Width="110" Height="30" Click="PrintRecipeToPDF_Click" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>

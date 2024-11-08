@@ -1,0 +1,42 @@
+﻿<Window x:Class="Keto.Views.Calculators.CalculatorsPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Kalkulatory" WindowState="Maximized">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Home button -->
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
+            <Button Width="40" Height="40" Click="GoToMainPage_Click">
+                <Image Source="/images/home.png" Stretch="Uniform"/>
+            </Button>
+        </StackPanel>
+
+        <!-- Title -->
+        <TextBlock Text="Strona z kalkulatorami" FontSize="20" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10"/>
+
+        <!-- Buttons to select calculators -->
+        <StackPanel Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" Margin="10">
+            <Button Content="Kalkulator BMR" Width="155" Height="30" Click="ShowBMRCalculator" Margin="5"/>
+            <Button Content="Kalkulator Zapotrzebowanie" Width="155" Height="30" Click="ShowEnergyCalculator" Margin="5"/>
+            <Button Content="Kalkulator Makroskładników" Width="155" Height="30" Click="ShowMacroCalculator" Margin="5"/>
+        </StackPanel>
+
+        <!-- Content Display -->
+        <StackPanel Grid.Row="1" Grid.Column="1" x:Name="CalculatorContent" Margin="10">
+            <!-- Dynamic content for calculators will be displayed here -->
+        </StackPanel>
+
+        <!-- Results Display -->
+        <StackPanel Grid.Row="1" Grid.Column="1" x:Name="ResultsContent" VerticalAlignment="Bottom" Margin="10">
+            <TextBlock x:Name="ResultTextBlock" FontSize="14" FontWeight="Bold" Visibility="Collapsed"/>
+        </StackPanel>
+    </Grid>
+</Window>

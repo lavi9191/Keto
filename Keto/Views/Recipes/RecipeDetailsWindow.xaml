@@ -1,0 +1,30 @@
+﻿<Window x:Class="Keto.Views.Recipes.RecipeDetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Szczegóły przepisu" Height="720" Width="500">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="20">
+            <TextBlock Text="Szczegóły przepisu:" FontWeight="Bold" FontSize="16" Margin="0,0,0,10"/>
+            <TextBlock Text="Nazwa:"/>
+            <TextBlock x:Name="RecipeNameTextBlock" FontWeight="Bold" Margin="0,0,0,10"/>
+            <TextBlock Text="Kategoria:"/>
+            <TextBlock x:Name="RecipeCategoryTextBlock" Margin="0,0,0,10"/>
+            <TextBlock Text="Składniki:"/>
+            <TextBlock x:Name="RecipeIngredientsTextBlock" Margin="0,0,0,10"/>
+            <TextBlock Text="Białko (g):"/>
+            <TextBlock x:Name="RecipeProteinTextBlock" Margin="0,0,0,10"/>
+            <TextBlock Text="Tłuszcz (g):"/>
+            <TextBlock x:Name="RecipeFatTextBlock" Margin="0,0,0,10"/>
+            <TextBlock Text="Węglowodany (g):"/>
+            <TextBlock x:Name="RecipeCarbsTextBlock" Margin="0,0,0,10"/>
+            <TextBlock Text="Węglowodany netto (g):"/>
+            <TextBlock x:Name="RecipeNetCarbsTextBlock" Margin="0,0,0,10"/>
+            <TextBlock Text="Kalorie (kcal):"/>
+            <TextBlock x:Name="RecipeCaloriesTextBlock" Margin="0,0,0,10"/>
+            <TextBlock Text="Ilość porcji:"/>
+            <TextBlock x:Name="RecipeServingsTextBlock" Margin="0,0,0,10"/>
+            <TextBlock Text="Instrukcja przygotowania:"/>
+            <TextBlock x:Name="RecipeInstructionsTextBlock" TextWrapping="Wrap" Margin="0,0,0,10"/>
+        </StackPanel>
+    </ScrollViewer>
+</Window>

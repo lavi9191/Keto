@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>D:\ProjektyVS2022\Keto\Keto\Properties\PublishProfiles\ClickOnceProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\Recipes\AddRecipeWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Calculators\CalculatorsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\MealPlan\DailyPlanView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Recipes\EditRecipeWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Info\InfoPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\MealPlan\MacroCalculatorView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\MealPlan\MealPlanPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\MealPlan\RandomMealPlanView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Recipes\RecipeDetailsWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Recipes\RecipesPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Recipes\AddRecipeWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Calculators\CalculatorsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\MealPlan\DailyPlanView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Recipes\EditRecipeWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Info\InfoPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\MealPlan\MacroCalculatorView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Main\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\MealPlan\MealPlanPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\MealPlan\RandomMealPlanView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Recipes\RecipeDetailsWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Recipes\RecipesPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
